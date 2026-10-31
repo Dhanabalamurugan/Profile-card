@@ -1,0 +1,101 @@
+/* ChES palette, taken from the logo */
+:root {
+  --blue: #3b97d3;
+  --dark-blue: #1d6fa5;
+  --grey: #555;
+  --light: #eaf4fb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light);
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--grey);
+}
+
+.card {
+  width: 330px;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(29, 111, 165, 0.25);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(29, 111, 165, 0.35);
+}
+
+/* banner holding the ChES logo */
+.banner {
+  position: relative;
+  height: 140px;
+  background: linear-gradient(135deg, var(--dark-blue), var(--blue));
+}
+
+.logo {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  height: 60px;
+  padding: 4px 10px;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  margin-top: -60px;
+  position: relative; /* paints above the banner */
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 22px;
+  margin-top: 12px;
+  color: var(--dark-blue);
+}
+
+.role {
+  font-size: 13px;
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.about {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 16px 24px 24px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 28px;
+  background: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: var(--dark-blue);
+  transform: scale(1.05);
+}
